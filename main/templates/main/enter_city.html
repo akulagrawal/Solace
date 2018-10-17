@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+		{% load static %}
+
 	<title>Solace</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="enter_city.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'main/enter_city.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +16,7 @@
 <body>
 	<div class = "outer_div">
 		<div class = "upper_div">
-			<a href = "search_box.html" class = "upper_div_div_cross_icon_a"> <i class = "fa fa-close w3-xxlarge upper_div_div_cross_icon"></i> </a>
+			<a href = "/" class = "upper_div_div_cross_icon_a"> <i class = "fa fa-close w3-xxlarge upper_div_div_cross_icon"></i> </a>
 			<div class = "upper_div_div">
 				<p class = "upper_div_div_para">Enter the Location</p>
 				<div class = "upper_div_div_search_box_wrapper">
@@ -26,7 +28,7 @@
 								<input type="text" name="location" class = "location_input" size="20" maxlength="50">
 							</div>
 						</div>
-						<a href="result.html"><button class="upper_div_div_search_box_search_bar_search_btn">Search</button></a>
+						<a href="/result"><button class="upper_div_div_search_box_search_bar_search_btn">Search</button></a>
 					</div>	
 				</div>
 			</div>

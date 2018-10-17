@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+        {% load static %}
+	<title>Solace</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'main/result.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <meta charset="UTF-8">
+</head>
+<body>
+	<div class="outer_div">
+		<div class="header_wrapper">
+			<a href="search_box.html"><div class="header_logo">SOLACE</div></a>
+			<div class="upper_div_search_bar_wrapper">
+				<div class="upper_div_search_bar">
+					<i class = "fa fa-search result_search_icon"></i>
+					<span class="search_text">Geeta Colony</span>
+				</div>
+			</div>
+			<div class="login_icon">
+				<span class="login_icon_span"><i class="material-icons login_person_img">person</i> <div class="login_text"> Login </div></span>
+			</div>
+		</div>
+		<div class="result_section_wrapper">
+			<div class="result_list_div_wrapper">
+				<div id = "ele1" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://cdn-03.independent.ie/business/personal-finance/property-mortgages/article37289708.ece/e354d/AUTOCROP/w620/2018-09-07_bus_43801572_I4.JPG" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele2" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjOPY93e3dAuttFlkAkiUVfYjUlRj-8HToYUPvDpZyoEg8UE4zzg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele3" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://images.pexels.com/photos/259600/pexels-photo-259600.jpeg?auto=compress&cs=tinysrgb&h=350" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele4" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://images.pexels.com/photos/462358/pexels-photo-462358.jpeg?cs=srgb&dl=garden-house-lawn-462358.jpg&fm=jpg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele5" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://media.npr.org/assets/img/2018/07/19/gettyimages-159178273-85e99c6db6a35d1abe4babe1f72181ef1fafa03a-s800-c85.jpg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele6" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="http://www.interior-fun.com/wp-content/uploads/2018/01/Best-Amazing-Beautiful-House-Design-Pictures-Remodel-t.jpg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele7" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="http://keralahome.design/wp-content/uploads/2016/02/kerala-home-design-4.jpg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele8" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://magnolia.com/wp-content/themes/magnolia/images/stay/d-carousel-2.jpg?x23476" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele9" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://www.thewrap.com/wp-content/uploads/2018/02/WinchesterMysteryHouseCover.jpg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele10" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://www.latimes.com/resizer/e8RpdNGt33noG4_y_wVJIItHs6g=/700x393/filters:quality(80)/s3.amazonaws.com/arc-goldfish-tronc-thumbnails/07-19-2018/t_1532019322041_name_la_fi_the_brady_bunch_house_is_for_sale_video_20180719" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id = "ele11" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://www.288group.com/wp-content/uploads/2017/03/4453801505_c82b3ddc62_o.jpg" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_address">13/135, Geeta Colony, Delhi-110031</div>
+							<div class="result_performance">
+								<div class="result_rating">
+									<div class="result_rating_heading">
+										Rating
+									</div>
+									<div class="result_rating_value">
+										10
+									</div>
+								</div>
+								<div class="result_color">
+									<div class="result_color_heading">
+										Heat Value
+									</div>
+									<div class="result_rating_value">
+										green
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="result_contact_wrapper">
+							<div class="result_contact_name">
+								Aakash Kumar
+							</div>
+							<div class="result_contact_number">
+								9957989683
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="result_right_section_wrapper">
+				<div id = "googleMap" class="result_map_wrapper">
+					MAP NOT LOADING...
+				</div>
+				<div id = "display_selected_div" class="result_selected_display">
+					SELECTED ELEMENT WILL BE DISPLAYED HERE
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script>
+		function myMap() {
+			var mapProp= {
+			    center:new google.maps.LatLng(51.508742,-0.120850),
+			    zoom:5,
+			};
+			var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		function show_id(clicked_id){
+			document.getElementById("display_selected_div").innerHTML = "ELEMENT " + clicked_id.substring(3) + " WAS CLICKED";
+		}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl8x6fx5HuWT9-lJ7STI-Uh-r5ktSWgZw&callback=myMap"></script>
+
+
+
+</body>
+</html>
