@@ -8,4 +8,5 @@ def search_view(request):
     return render(request,'main/enter_city.html')
 
 def results_view(request):
+    print(request.GET)
     return render(request,'main/result.html')

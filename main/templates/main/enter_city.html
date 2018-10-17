@@ -24,11 +24,12 @@
 						<i class = "fa fa-search w3-xlarge upper_div_div_search_box_search_icon"></i>
 						<div class="upper_div_div_search_box_search_bar_wrapper">
 							<div class="upper_div_div_search_box_search_bar">
-								<span class="placeholder">Enter Locality, City you want to search</span>
-								<input type="text" name="location" class = "location_input" size="20" maxlength="50">
+								
+								<input onchange="displayEnteredValue()" id="inputSearchBoxLat" placeholder="Laitutde"/>
+								<input onchange="displayEnteredValue()" id="inputSearchBoxLng" placeholder="Longitude"/>
 							</div>
 						</div>
-						<a href="/result"><button class="upper_div_div_search_box_search_bar_search_btn">Search</button></a>
+						<button class="upper_div_div_search_box_search_bar_search_btn" onclick="redirectToResultPage()">Search</button>
 					</div>	
 				</div>
 			</div>
@@ -59,5 +60,20 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		function displayEnteredValue(){
+			//document.getElementById("inputSearchBox").innerHTML = document.getElementById("inputSearchBox")
+		}
+
+		function redirectToResultPage(){
+			var redirectURL = "http://localhost:8000/result?lat=" + document.getElementById("inputSearchBoxLat").value + "&lng=" + document.getElementById("inputSearchBoxLng").value
+			console.log(document.getElementById("inputSearchBoxLat").value)
+			console.log(redirectURL)
+			window.location = redirectURL
+		}
+		
+	</script>
+
 </body>
 </html>
