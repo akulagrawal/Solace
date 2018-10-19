@@ -25,11 +25,11 @@ body{
 	display: inline-block;
 	height: 100%;
 	position: relative;
-	font-size: 40px;
-	vertical-align: middle;
+	font-size: 32px;
+    vertical-align: middle;
+    margin-top: 8px;
 	padding: 5px 10px 0 10px;
-	font-family: 'Audiowide', cursive;
-	border-right: 1px solid #DDDDDD;
+	font-family: 'Fira Mono';
 	cursor: pointer;
 	color: #FFFFFF;
 }
