@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+        {% load static %}
+	<title>Solace</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'main/result.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <meta charset="UTF-8">
+</head>
+<body>
+	<div class="outer_div">
+		<div class="header_wrapper">
+			<a href="search_box.html"><div class="header_logo">SOLACE</div></a>
+			<div class="upper_div_search_bar_wrapper">
+				<!-- <div class="upper_div_search_bar">
+					<i class = "fa fa-search result_search_icon"></i>
+					<span class="search_text">Geeta Colony</span>
+				</div> -->
+			</div>
+			<div class="login_icon">
+				<span class="login_icon_span"><i class="material-icons login_person_img">person</i> <div class="login_text"> Login </div></span>
+			</div>
+		</div>
+		<div class="result_section_wrapper">
+			<div class="result_list_div_wrapper">
+				<div id = "ele1" class="result_element_wrapper" onclick="show_id(this.id)">
+					<div class="result_image_wrapper">
+						<img src="https://cdn-03.independent.ie/business/personal-finance/property-mortgages/article37289708.ece/e354d/AUTOCROP/w620/2018-09-07_bus_43801572_I4.JPG" class="result_image_img">
+					</div>
+					<div class="result_right_wrapper">
+						<div class="result_description_wrapper">
+							<div class="result_performance">
+								<div class="result_overall_score">
+									<div class="result_overall_score_text">OVERALL SCORE</div>
+									<div class="result_overall_score_value score_value">10</div>
+								</div>
+								<div class="result_individual_score_block">
+									<div class="result_individual_score_row">
+										<div class="result_individual_score_row_left_col">
+											<div class="result_individual_score_text">Airport</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="result_individual_score_row_right_col">
+											<div class="result_individual_score_text">Bus Station</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>
+									<div class="result_individual_score_row">
+										<div class="result_individual_score_row_left_col">
+											<div class="result_individual_score_text">Doctor</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>		
+										</div>
+										<div class="result_individual_score_row_right_col">
+											<div class="result_individual_score_text">Fire Station</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>
+									<div class="result_individual_score_row">
+										<div class="result_individual_score_row_left_col">
+											<div class="result_individual_score_text">Park</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>		
+										</div>
+										<div class="result_individual_score_row_right_col">
+											<div class="result_individual_score_text">Police Station</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="result_individual_score_row">
+										<div class="result_individual_score_row_left_col">
+											<div class="result_individual_score_text">Taxi Stand</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>		
+										</div>
+										<div class="result_individual_score_row_right_col">
+											<div class="result_individual_score_text">Train Station</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>
+									<div class="result_individual_score_row">
+										<div class="result_individual_score_row_left_col">
+											<div class="result_individual_score_text">Transit Station</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>	
+										</div>
+										<div class="result_individual_score_row_right_col">
+											<div class="result_individual_score_text">SCORE</div>
+											<div class="result_individual_score_value_bar score_value">
+												<div class="result_individual_score_value score_value"></div>
+												<div class="result_individual_score_bar">
+													<div class="w3-progress-container" style="background-color: #DDDDDD;">
+													  <div class="w3-progressbar result_individual_score_bar_bar" style="height: 20px;"></div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="result_right_section_wrapper">
+				<div id = "map" class="result_map_wrapper">
+					MAP NOT LOADING...
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script>
+      // This example requires the Visualization library. Include the libraries=visualization
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
+      var map, heatmap;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 28.466276, lng: 77.510747},
+        });
+        heatmap = new google.maps.visualization.HeatmapLayer({
+          data: getPoints(),
+          map: map,
+          radius : 150,
+        });
+      }
+      function toggleHeatmap() {
+        heatmap.setMap(heatmap.getMap() ? null : map);
+      }
+      function changeGradient() {
+        var gradient = [
+          'rgba(0, 255, 255, 0)',
+          'rgba(0, 255, 255, 1)',
+          'rgba(0, 191, 255, 1)',
+          'rgba(0, 127, 255, 1)',
+          'rgba(0, 63, 255, 1)',
+          'rgba(0, 0, 255, 1)',
+          'rgba(0, 0, 223, 1)',
+          'rgba(0, 0, 191, 1)',
+          'rgba(0, 0, 159, 1)',
+          'rgba(0, 0, 127, 1)',
+          'rgba(63, 0, 91, 1)',
+          'rgba(127, 0, 63, 1)',
+          'rgba(191, 0, 31, 1)',
+          'rgba(255, 0, 0, 1)'
+        ]
+        heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+      }
+      function changeRadius() {
+        heatmap.set('radius', heatmap.get('radius') ? 200 : 200);
+      }
+      function changeOpacity() {
+        heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+      }
+      // Heatmap data: 500 Points
+      function getPoints() {
+        return [
+          {location: new google.maps.LatLng(28.477332,77.524999), weight: 1.5},
+          {location: new google.maps.LatLng(28.507930, 77.529384), weight: 0.5},
+          {location: new google.maps.LatLng(28.486891, 77.491275), weight: 2.5},
+          {location: new google.maps.LatLng(28.456775, 77.520719), weight: 3.5},
+          {location: new google.maps.LatLng(28.474241, 77.569357), weight: 1},
+        ];
+      }
+      function show_id(element_id){
+      	var ele = document.getElementById('display_selected_div');
+      	var ele_num = element_id.substring(3);
+      	ele.innerHTML = "ELEMENT " + ele_num + " WAS SELECTED";
+      }
+      function setColorfromScore(score){
+      		var score_int = parseInt(score);
+      		var r = 255 - ((score_int * 255) / 100);
+      		var g = 255 - (((100 - score_int) * 255) / 100);
+      		// console.log(score_int + ' ' +  r  +  ' ' +  g);
+      		return 'rgb(' + r.toString() + ' , ' + g.toString()  + ', 0)';
+      }
+        var score_array = ['10' , '20' , '30' , '40' , '50' , '60' , '70' , '80' , '90' , '100'];
+        var score_doc = document.getElementsByClassName('result_individual_score_value');
+        var score_doc_length = score_doc.length;
+        for(var i = 0 ; i < score_doc_length ; i++){
+        	score_doc[i].innerHTML = score_array[i];
+        }
+	     var score_value_ele = document.getElementsByClassName('score_value');
+	     var score_value_ele_length = score_value_ele.length;
+	     for(var i = 0 ; i < score_value_ele_length ; i++){
+	     	var curr_ele = score_value_ele[i];
+	     	var curr_score = curr_ele.innerHTML;
+	     	curr_ele.style.color = setColorfromScore(curr_score);
+	     }
+	     var score_bar = document.getElementsByClassName('result_individual_score_bar_bar');
+	     var indi_score_value = document.getElementsByClassName('result_individual_score_value');
+	     var indi_score_value_length = indi_score_value.length;
+	     for(var i = 0 ; i < indi_score_value_length ; i++){
+	     	var curr_score = indi_score_value[i].innerHTML;
+	     	score_bar[i].style.width = curr_score + '%';
+	     	score_bar[i].style.backgroundColor = setColorfromScore(curr_score);
+	     }
+	     // console.log(indi_score_value.length);
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gTlyrAaD5wN9zit_lSKLiNIGWhgKtwc&libraries=visualization&callback=initMap">
+    </script>
+
+
+
+</body>
+</html>
