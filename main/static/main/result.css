@@ -25,11 +25,11 @@ body{
 	display: inline-block;
 	height: 100%;
 	position: relative;
-	font-size: 32px;
-    vertical-align: middle;
-    margin-top: 8px;
+	font-size: 40px;
+	vertical-align: middle;
 	padding: 5px 10px 0 10px;
-	font-family: 'Fira Mono';
+	font-family: 'Audiowide', cursive;
+	border-right: 1px solid #DDDDDD;
 	cursor: pointer;
 	color: #FFFFFF;
 }
@@ -95,31 +95,29 @@ body{
 	font-size: 14px; 
 }
 .result_section_wrapper{
-	min-width: 1024px;
-	max-width: 1410px;
 	width: 100%;
 	margin: 0 auto;
-	height: auto;
-	overflow: hidden;
+	height: 100%;
+	overflow: auto;
 	margin-top: 65px;
 }
 .result_list_div_wrapper{
 	width: 60%;
 	float: left;
-	height: auto;
+	height: 100%;
 	border: 1px solid #DDDDDD;
 	overflow-y: scroll;
 }
 .result_element_wrapper{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #F7F7F7;
 	border: 1px solid #F1F1F1;
 	cursor: pointer;
 }
 .result_image_wrapper{
-	width: 35%;
-	height: 100%;
+	width: 100%;
+	height: 60%;
 	float: left;
 }
 .result_image_img{
@@ -128,8 +126,8 @@ body{
 	object-fit: cover;
 }
 .result_right_wrapper{
-	width: 65%;
-	height: 100%;
+	width: 100%;
+	height: auto;
 	float: right;
 	padding: 10px 20px;
 }
@@ -143,6 +141,8 @@ body{
 }
 .result_performance{
 	width: 100%;
+	margin-top: 0px;
+	text-align: center;
 }
 .result_rating{
 	width: 30%;
@@ -172,9 +172,6 @@ body{
 	display: inline-block;
 	float: right;
 }
-.result_performance{
-	margin-top: 50px;
-}
 .result_rating{
 	display: inline-block;
 }
@@ -193,8 +190,8 @@ body{
 	width: 100%;
 	float: right;
 	border: 1px solid #DDDDDD;
-	max-height: 500px;
-	height: 500px;
+	max-height: 800px;
+	height: 800px;
 	text-align: center;
 	line-height: 500px; 
 }
@@ -204,4 +201,57 @@ body{
 	height: 100%;
 	text-align: center;
 	line-height: 400px;
+}
+.result_overall_score{
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 30px;
+}
+.result_overall_score_text{
+	display: inline-block;
+	padding-right: 10px; 
+}
+.result_overall_score_value{
+	display: inline-block;
+	padding-left: 10px; 
+}
+.result_individual_score_row_left_col , .result_individual_score_row_right_col{
+	display: inline-block;
+	width: 50%;
+}
+.result_individual_score_row_left_col{
+	float: left;
+}
+.result_individual_score_row_right_col{
+	float: right;
+}
+.result_individual_score_row{
+	overflow: auto;
+}
+.result_individual_score_text , .result_individual_score_value_bar{
+	display: inline-block;
+	width: 50%;
+	font-size: 14px !important;
+}
+.result_individual_score_text{
+	float: left;
+	text-align: right;
+	padding-right: 20px;
+}
+.result_individual_score_value , .result_individual_score_bar{
+	display: inline-block;
+}
+.result_individual_score_value{
+	width: 10%;
+	float: left;
+}
+.result_individual_score_value_bar{
+	float: right;
+	text-align: left;
+	padding-left: 20px;
+}
+.result_individual_score_bar{
+	width: 90%;
+	float: right;
 }
