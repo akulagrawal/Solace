@@ -159,7 +159,7 @@ def cal_score(lat, lng):
     # In[19]:
 
 
-    p#rint(data[0])
+    #print(data[0])
 
 
     # In[20]:
