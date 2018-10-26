@@ -129,6 +129,7 @@ body{
 	width: 100%;
 	height: auto;
 	float: right;
+	margin-top: 10px;
 }
 .result_description_wrapper{
 	width: 100%;
@@ -184,14 +185,14 @@ body{
 	float: right;
 	background-color: #F4F4F4;
 	position: fixed !important;
-	right: 45px;
+	right: 10px;
 }
 .result_map_wrapper{
 	width: 100%;
 	float: right;
 	border: 1px solid #DDDDDD;
-	max-height: 800px;
-	height: 800px;
+	/*max-height: 800px;*/
+	height: 100%;
 	text-align: center;
 	line-height: 500px; 
 }
@@ -210,7 +211,8 @@ body{
 }
 .result_overall_score_text{
 	display: inline-block;
-	padding-right: 10px; 
+	padding-right: 10px;
+	*
 }
 .result_overall_score_value{
 	display: inline-block;
@@ -228,6 +230,7 @@ body{
 }
 .result_individual_score_row{
 	overflow: auto;
+	padding: 5px 0;
 }
 .result_individual_score_text , .result_individual_score_value_bar{
 	display: inline-block;
@@ -243,7 +246,7 @@ body{
 	display: inline-block;
 }
 .result_individual_score_value{
-	width: 10%;
+	width: 20%;
 	float: left;
 }
 .result_individual_score_value_bar{
@@ -252,6 +255,13 @@ body{
 	padding-left: 20px;
 }
 .result_individual_score_bar{
-	width: 90%;
+	width: 80%;
 	float: right;
+	padding-left: 10px;
+}
+.my_progress_container{
+	border-radius: 2px 10px 10px 2px;
+}
+.result_individual_score_bar_bar{
+	border-radius: 2px 10px 10px 2px;
 }
