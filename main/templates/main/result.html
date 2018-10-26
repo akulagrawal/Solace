@@ -26,9 +26,7 @@
 					<span class="search_text">Geeta Colony</span>
 				</div> -->
 			</div>
-			<div class="login_icon">
-				<span class="login_icon_span"><i class="material-icons login_person_img">person</i> <div class="login_text"> Login </div></span>
-			</div>
+			
 		</div>
 		<div class="result_section_wrapper">
 			<div class="result_list_div_wrapper">
@@ -40,9 +38,10 @@
 						<div class="result_description_wrapper">
 							<div class="result_performance">
 								<div class="result_overall_score">
-									<div class="result_overall_score_text">OVERALL SCORE</div>
-									<div class="result_overall_score_value score_value">10</div>
+									<div class="result_overall_score_text">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp OVERALL SCORE</div>
+									<div class="result_overall_score_value score_value" id="main_score">0</div>
 								</div>
+								<p></p><br/></br/>
 								<div class="result_individual_score_block">
 									<div class="result_individual_score_row">
 										<div class="result_individual_score_row_left_col">
@@ -94,7 +93,7 @@
 									</div>
 									<div class="result_individual_score_row">
 										<div class="result_individual_score_row_left_col">
-											<div class="result_individual_score_text">Park</div>
+											<div class="result_individual_score_text">Hospital</div>
 											<div class="result_individual_score_value_bar score_value">
 												<div class="result_individual_score_value score_value"></div>
 												<div class="result_individual_score_bar">
@@ -105,7 +104,7 @@
 											</div>		
 										</div>
 										<div class="result_individual_score_row_right_col">
-											<div class="result_individual_score_text">Police Station</div>
+											<div class="result_individual_score_text">Park</div>
 											<div class="result_individual_score_value_bar score_value">
 												<div class="result_individual_score_value score_value"></div>
 												<div class="result_individual_score_bar">
@@ -118,7 +117,7 @@
 									</div>
 									<div class="result_individual_score_row">
 										<div class="result_individual_score_row_left_col">
-											<div class="result_individual_score_text">Taxi Stand</div>
+											<div class="result_individual_score_text">Police</div>
 											<div class="result_individual_score_value_bar score_value">
 												<div class="result_individual_score_value score_value"></div>
 												<div class="result_individual_score_bar">
@@ -129,7 +128,7 @@
 											</div>		
 										</div>
 										<div class="result_individual_score_row_right_col">
-											<div class="result_individual_score_text">Train Station</div>
+											<div class="result_individual_score_text">Taxi Stand</div>
 											<div class="result_individual_score_value_bar score_value">
 												<div class="result_individual_score_value score_value"></div>
 												<div class="result_individual_score_bar">
@@ -142,7 +141,7 @@
 									</div>
 									<div class="result_individual_score_row">
 										<div class="result_individual_score_row_left_col">
-											<div class="result_individual_score_text">Transit Station</div>
+											<div class="result_individual_score_text">Train Station</div>
 											<div class="result_individual_score_value_bar score_value">
 												<div class="result_individual_score_value score_value"></div>
 												<div class="result_individual_score_bar">
@@ -153,7 +152,7 @@
 											</div>	
 										</div>
 										<div class="result_individual_score_row_right_col">
-											<div class="result_individual_score_text">SCORE</div>
+											<div class="result_individual_score_text">Score</div>
 											<div class="result_individual_score_value_bar score_value">
 												<div class="result_individual_score_value score_value"></div>
 												<div class="result_individual_score_bar">
@@ -186,15 +185,19 @@
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization">
       var map, heatmap;
-      function initMap() {
+			scoreData = {{score_data|safe}}
+			console.log('hi')
+			console.log(scoreData)
+			document.getElementById('main_score').innerHTML = scoreData[0][0]['score'].toFixed(2)
+      function initMap(scoreData) {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 28.466276, lng: 77.510747},
+          zoom: 10,
+          center: {lat: this.scoreData[0][0]['latitude'], lng: this.scoreData[0][0]['longitude']},
         });
         heatmap = new google.maps.visualization.HeatmapLayer({
           data: getPoints(),
           map: map,
-          radius : 150,
+          radius : 250,
         });
       }
       function toggleHeatmap() {
@@ -228,11 +231,11 @@
       // Heatmap data: 500 Points
       function getPoints() {
         return [
-          {location: new google.maps.LatLng(28.477332,77.524999), weight: 1.5},
-          {location: new google.maps.LatLng(28.507930, 77.529384), weight: 0.5},
-          {location: new google.maps.LatLng(28.486891, 77.491275), weight: 2.5},
-          {location: new google.maps.LatLng(28.456775, 77.520719), weight: 3.5},
-          {location: new google.maps.LatLng(28.474241, 77.569357), weight: 1},
+          {location: new google.maps.LatLng(this.scoreData[0][0]['latitude'], this.scoreData[0][0]['longitude']), weight: 100-this.scoreData[0][0]['score']},
+          {location: new google.maps.LatLng(this.scoreData[1][0]['latitude'], this.scoreData[1][0]['longitude']), weight: 100-this.scoreData[1][0]['score']},
+          {location: new google.maps.LatLng(this.scoreData[2][0]['latitude'], this.scoreData[2][0]['longitude']), weight: 100-this.scoreData[2][0]['score']},
+          {location: new google.maps.LatLng(this.scoreData[3][0]['latitude'], this.scoreData[3][0]['longitude']), weight: 100-this.scoreData[3][0]['score']},
+          {location: new google.maps.LatLng(this.scoreData[4][0]['latitude'], this.scoreData[4][0]['longitude']), weight: 100-this.scoreData[4][0]['score']},
         ];
       }
       function show_id(element_id){
@@ -247,7 +250,7 @@
       		// console.log(score_int + ' ' +  r  +  ' ' +  g);
       		return 'rgb(' + r.toString() + ' , ' + g.toString()  + ', 0)';
       }
-        var score_array = ['10' , '20' , '30' , '40' , '50' , '60' , '70' , '80' , '90' , '100'];
+        var score_array = [this.scoreData[0][1]['distance'].toFixed(2) , this.scoreData[0][2]['distance'].toFixed(2), this.scoreData[0][3]['distance'].toFixed(2), this.scoreData[0][4]['distance'].toFixed(2), this.scoreData[0][5]['distance'].toFixed(2), this.scoreData[0][6]['distance'].toFixed(2), this.scoreData[0][7]['distance'].toFixed(2), this.scoreData[0][8]['distance'].toFixed(2), this.scoreData[0][9]['distance'].toFixed(2), this.scoreData[0][0]['score'].toFixed(2)];
         var score_doc = document.getElementsByClassName('result_individual_score_value');
         var score_doc_length = score_doc.length;
         for(var i = 0 ; i < score_doc_length ; i++){
