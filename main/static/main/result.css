@@ -129,7 +129,6 @@ body{
 	width: 100%;
 	height: auto;
 	float: right;
-	padding: 10px 20px;
 }
 .result_description_wrapper{
 	width: 100%;
@@ -142,6 +141,7 @@ body{
 .result_performance{
 	width: 100%;
 	margin-top: 0px;
+	margin-left: -85px;
 	text-align: center;
 }
 .result_rating{

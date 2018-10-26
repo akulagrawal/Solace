@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class = "outer_div">
-		<div class = "upper_div">
+		<div class = "upper_div" id="non_calculation">
 			<a href = "/" class = "upper_div_div_cross_icon_a"> <i class = "fa fa-close w3-xxlarge upper_div_div_cross_icon"></i> </a>
 			<div class = "upper_div_div">
 				<p class = "upper_div_div_para">Enter the Location</p>
@@ -23,10 +23,8 @@
 					<div class = "upper_div_div_search_box">
 						<i class = "fa fa-search w3-xlarge upper_div_div_search_box_search_icon"></i>
 						<div class="upper_div_div_search_box_search_bar_wrapper">
-							<div class="upper_div_div_search_box_search_bar">
-								
-								<input onchange="displayEnteredValue()" id="inputSearchBoxLat" placeholder="Laitutde"/>
-								<input onchange="displayEnteredValue()" id="inputSearchBoxLng" placeholder="Longitude"/>
+							<div class="upper_div_div_search_box_search_bar" contenteditable="true" id="userInput">
+								 Enter the name of the city to run Solace
 							</div>
 						</div>
 						<button class="upper_div_div_search_box_search_bar_search_btn" onclick="redirectToResultPage()">Search</button>
@@ -34,30 +32,34 @@
 				</div>
 			</div>
 		</div>
-		<div class = "lower_div">
+		<div class = "lower_div" id="non_calculation2">
 			<div class="lower_div_div">
 				<div class="lower_div_div_popular_localities">
 					<div class="lower_div_div_popular_localities_list_wrapper">
 						<div class="lower_div_div_popular_localities_list">
 							<p class="lower_div_div_popular_localities_list-para">
-								POPULAR LOCALITIES
+								POPULAR LOCATIONS
 							</p>
 							<ul class="lower_div_div_popular_localities_list_ul">
-								<li class="lower_div_div_popular_localities_list_li">Geeta Colony</li>
-								<li class="lower_div_div_popular_localities_list_li">Laxmi Nagar</li>
-								<li class="lower_div_div_popular_localities_list_li">Anand Vihar</li>
-								<li class="lower_div_div_popular_localities_list_li">Nirman Vihar</li>
-								<li class="lower_div_div_popular_localities_list_li">Gandhi Nagar</li>
+								<a href="/result?city=Greater%20Noida"><li class="lower_div_div_popular_localities_list_li">Greater Noida</li></a>
+								<a href="/result?city=IIT%20Guwahati"><li class="lower_div_div_popular_localities_list_li">IIT Guwahati</li></a>
+								<a href="/result?city=Noida"><li class="lower_div_div_popular_localities_list_li">Noida</li></a>
+								<a href="/result?city=Ghaziabad"><li class="lower_div_div_popular_localities_list_li">Ghaziabad</li></a>
+								<a href="/result?city=Jaipur"><li class="lower_div_div_popular_localities_list_li">Jaipur</li></a>
 							</ul>
 						</div>	
 					</div>
 				</div>
 				<div class="lower_div_div_popular_localities_result">
 					<div class="lower_div_div_popular_localities_result_result">
-						WHAT SHOULD COME HERE?
+						
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class = "col-md-12 lower_div" id="calculation" style="display:none;text-align:center;">
+			<p style="margin-top:64px;"></p>
+			<span style="font-size:48px;">Applying our magic recipe over data... <br/><span style="font-size:24px;">This page will automatically be redirected once results are calculated ( approx time - 11 seconds )</span></span>
 		</div>
 	</div>
 
@@ -67,9 +69,11 @@
 		}
 
 		function redirectToResultPage(){
-			var redirectURL = "http://localhost:8000/result?lat=" + document.getElementById("inputSearchBoxLat").value + "&lng=" + document.getElementById("inputSearchBoxLng").value
-			console.log(document.getElementById("inputSearchBoxLat").value)
+			var redirectURL = "http://localhost:8000/result?city=" + document.getElementById("userInput").innerHTML
 			console.log(redirectURL)
+			document.getElementById("non_calculation").style.display="none";
+			document.getElementById("non_calculation2").style.display="none";
+			document.getElementById("calculation").style.display="block";
 			window.location = redirectURL
 		}
 		
