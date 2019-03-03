@@ -12,221 +12,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-	*{
-	font-family: 'K2D', sans-serif;
-}
-body{
-	margin: 0;
-	padding: 0;
-}
-.outer_div{
-	height: 100vh;
-	overflow: auto;
-}
-.upper_div{
-	border: 1px solid #f4f4f4;
-	width: 100%;
-	height: 200px;
-	background-color: #f4f4f4;
-}
-.upper_div_div_cross_icon{
-	float: right;
-	margin: 20px;
-	cursor: pointer;
-}
-.upper_div_div_cross_icon:hover{
-	color: #4D4D4D;
-}
-.upper_div_div{
-	padding-top: 30px;
-	max-width: 1000px;
-	margin: 0 auto;
-	position: relative;
-}
-.upper_div_div_para{
-	padding-left: 15px;
-	color: #4D4D4D;
-	letter-spacing: 1px;
-	font-size: 13px;
-	font-weight: bold;
-	padding-bottom: 10px;
-}
-.upper_div_div_search_box_search_box_wrapper{
-	font-size: 12px;
-	letter-spacing: normal;
-	line-height: 18px;
-}
-.upper_div_div_search_box{
-	box-sizing: border-box;
-	background-color: #FFFFFF;
-	letter-spacing: normal;
-	line-height: 18px;
-	max-height: 160px;
-	overflow: auto;
-	padding: 10px 0;
-	position: relative;
-	border: 1px solid #DDDDDD;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	transition-delay: 0s;
-	transition-duration: 0.3s;
-	transition-property: all;
-	transition-timing-function: ease;
-}
-.upper_div_div_search_box_search_icon{
-	display: inline-block;
-	margin-left: 20px;
-	font-weight: 100;
-	height: 45px;
-	line-height: 45px !important;
-}
-.upper_div_div_search_box_search_bar_wrapper{
-	width: 740px;
-	display: inline-block;
-	vertical-align: top;
-}
-.upper_div_div_search_box_search_bar{
-	cursor: text;
-	display: inline-block;
-	height: 45px;
-	font-size: 25px;
-	letter-spacing: normal;
-	line-height: 45px;
-	position: relative;
-	vertical-align: top;
-	margin-left: 10px;
-}
-.placeholder{
-	display: inline-block;
-	vertical-align: top;
-	font-size: 24px;
-	font-weight: 500;
-	width: auto;
-	position: relative;
-	color: #ede6ec;
-}
-.location_input{
-	max-width: 760px;
-	position: absolute;
-	left: 0;
-	font-size: 30px;
-	line-height: 45px;
-	font-weight: 500;
-	margin: 0;
-	border: none;
-	outline: none;
-	padding: 0;
-	background-color: transparent;
-	cursor: text;
-	transition-timing-function: ease-in-out;
-	transition: 0.3s;
-	transition-duration: 0.3s;
-	transition-delay: 0s;
-}
-.upper_div_div_search_box_search_bar_search_btn{
-	background-color: #E6E6E6;
-	color: #BBBBBB;
-	font-weight: 700;
-	height: 45px;
-	width: 200px;
-	font-size: 15px;
-	border: none;
-	text-align: center;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-	vertical-align: top;
-	cursor: pointer;
-	border-radius: 4px;
-	transition: 0.2s;
-	transition-timing-function: ease-in-out;
-	outline: none;
-	letter-spacing: 1px;
-}
-.upper_div_div_search_box_search_bar_search_btn:hover{
-	background-color: #F1F1F1;
-	transition: 0.2s;
-	transition-timing-function: ease-in-out;
-}
-.lower_div_div{
-	max-width: 1000px;
-	margin: 0 auto;
-	margin-top: 30px;
-	display: block;
-	height: 500px;
-}
-.lower_div_div_popular_localities{
-	width: 40%;
-	display: inline-block;
-	vertical-align: top;
-	height: 100%;
-}
-.lower_div_div_popular_localities_list_wrapper{
-	margin: 0;
-	padding: 0;
-	letter-spacing: normal;
-	line-height: 18px;
-}
-.lower_div_div_popular_localities_list-para{
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 1px;
-	line-height: 18px;
-	padding: 7px 0;
-	position: relative;
-	overflow: hidden;
-}
-.lower_div_div_popular_localities_list-para::after{
-	content: '';
-	border-top: 1px solid #E6E6E6;
-	width: 100%;
-	margin-left: 20px;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-}
-.lower_div_div_popular_localities_list_ul{
-	margin: 0;
-	padding: 0;
-	list-style: none inside none;
-}
-.lower_div_div_popular_localities_list_li{
-	line-height: 20px;
-	cursor: pointer;
-	padding: 7px 10px;
-	color: #7F7F7F;
-	font-size: 14px;
-	letter-spacing: 2px;
-}
-.lower_div_div_popular_localities_list_li:hover{
-	background-color: #5E23DC;
-	color: #FFFFFF;
-	font-weight: 700;
-}
-.lower_div_div_popular_localities_result{
-	width: 58%;
-	float: right;
-	display: inline-block;
-	height: 100%;
-	vertical-align: top;
-}
-.lower_div_div_popular_localities_result_result{
-	padding: 15px;
-	border: 1px solid #E6E6E6;
-	margin-left: 22px;
-	margin-top: 18px;
-	height: 100%;
-	line-height: 400px;
-	text-align: center;
-}
-		
-	</style>
 </head>
 <body>
 	<div class = "outer_div">
-		<div class = "upper_div" id="non_calculation">
+		<div class = "upper_div">
 			<a href = "/" class = "upper_div_div_cross_icon_a"> <i class = "fa fa-close w3-xxlarge upper_div_div_cross_icon"></i> </a>
 			<div class = "upper_div_div">
 				<p class = "upper_div_div_para">Enter the Location</p>
@@ -234,8 +23,10 @@ body{
 					<div class = "upper_div_div_search_box">
 						<i class = "fa fa-search w3-xlarge upper_div_div_search_box_search_icon"></i>
 						<div class="upper_div_div_search_box_search_bar_wrapper">
-							<div class="upper_div_div_search_box_search_bar" contenteditable="true" id="userInput">
-								 Enter the name of the city to run Solace
+							<div class="upper_div_div_search_box_search_bar">
+								
+								<input onchange="displayEnteredValue()" id="inputSearchBoxLat" placeholder="Laitutde"/>
+								<input onchange="displayEnteredValue()" id="inputSearchBoxLng" placeholder="Longitude"/>
 							</div>
 						</div>
 						<button class="upper_div_div_search_box_search_bar_search_btn" onclick="redirectToResultPage()">Search</button>
@@ -243,34 +34,30 @@ body{
 				</div>
 			</div>
 		</div>
-		<div class = "lower_div" id="non_calculation2">
+		<div class = "lower_div">
 			<div class="lower_div_div">
 				<div class="lower_div_div_popular_localities">
 					<div class="lower_div_div_popular_localities_list_wrapper">
 						<div class="lower_div_div_popular_localities_list">
 							<p class="lower_div_div_popular_localities_list-para">
-								POPULAR LOCATIONS
+								POPULAR LOCALITIES
 							</p>
 							<ul class="lower_div_div_popular_localities_list_ul">
-								<a href="/result?city=Greater%20Noida"><li class="lower_div_div_popular_localities_list_li">Greater Noida</li></a>
-								<a href="/result?city=IIT%20Guwahati"><li class="lower_div_div_popular_localities_list_li">IIT Guwahati</li></a>
-								<a href="/result?city=Noida"><li class="lower_div_div_popular_localities_list_li">Noida</li></a>
-								<a href="/result?city=Ghaziabad"><li class="lower_div_div_popular_localities_list_li">Ghaziabad</li></a>
-								<a href="/result?city=Jaipur"><li class="lower_div_div_popular_localities_list_li">Jaipur</li></a>
+								<li class="lower_div_div_popular_localities_list_li">Geeta Colony</li>
+								<li class="lower_div_div_popular_localities_list_li">Laxmi Nagar</li>
+								<li class="lower_div_div_popular_localities_list_li">Anand Vihar</li>
+								<li class="lower_div_div_popular_localities_list_li">Nirman Vihar</li>
+								<li class="lower_div_div_popular_localities_list_li">Gandhi Nagar</li>
 							</ul>
 						</div>	
 					</div>
 				</div>
 				<div class="lower_div_div_popular_localities_result">
 					<div class="lower_div_div_popular_localities_result_result">
-						
+						WHAT SHOULD COME HERE?
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class = "col-md-12 lower_div" id="calculation" style="display:none;text-align:center;">
-			<p style="margin-top:64px;"></p>
-			<span style="font-size:48px;">Applying our magic recipe over data... <br/><span style="font-size:24px;">This page will automatically be redirected once results are calculated ( approx time - 11 seconds )</span></span>
 		</div>
 	</div>
 
@@ -280,11 +67,9 @@ body{
 		}
 
 		function redirectToResultPage(){
-			var redirectURL = "http://cfd19.eastus.cloudapp.azure.com/result?city=" + document.getElementById("userInput").innerHTML
+			var redirectURL = "http://localhost:8000/result?lat=" + document.getElementById("inputSearchBoxLat").value + "&lng=" + document.getElementById("inputSearchBoxLng").value
+			console.log(document.getElementById("inputSearchBoxLat").value)
 			console.log(redirectURL)
-			document.getElementById("non_calculation").style.display="none";
-			document.getElementById("non_calculation2").style.display="none";
-			document.getElementById("calculation").style.display="block";
 			window.location = redirectURL
 		}
 		
