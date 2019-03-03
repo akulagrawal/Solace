@@ -8,22 +8,21 @@ body{
 .outer_div{
 	height: 100vh;
 	overflow: auto;
-	background-image: url('https://c1.staticflickr.com/4/3765/10633150616_58bcde8a64_b.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 .search_box_div_para{
 	margin-top: 15%;
 	text-align: center;
-	font-size: 40px;
-	color: #DDDDDD;
+	font-size: 100px;
+	color: black;
 	
 }
 .search_box{
 	width: 50%;
 	height: 50px;
 	margin: 0 auto !important;
-	border: 1px solid transparent;
+	border: 1px solid #333;
 	border-radius: 4px;
 	background: transparent;
 	padding: 0 !important;

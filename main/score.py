@@ -91,11 +91,11 @@ def cal_score(lat, lng):
     # In[10]:
 
 
-    for i in range(0,n):
-        print(loc[i])
-        print(name[i])
-        print(places[i])
-        print('')
+    # for i in range(0,n):
+    #     print(loc[i])
+    #     print(name[i])
+    #     print(places[i])
+    #     print('')
 
 
     # In[11]:
@@ -107,8 +107,8 @@ def cal_score(lat, lng):
     # In[12]:
 
 
-    print(loc[0])
-    print(LOCATION)
+    #print(loc[0])
+    #print(LOCATION)
 
 
     # In[13]:
@@ -123,7 +123,7 @@ def cal_score(lat, lng):
     # In[14]:
 
 
-    print(dist)
+    #print(dist)
 
 
     # In[15]:
@@ -153,19 +153,19 @@ def cal_score(lat, lng):
     # In[18]:
 
 
-    print(data)
+    #print(data)
 
 
     # In[19]:
 
 
-    print(data[0])
+    #print(data[0])
 
 
     # In[20]:
 
 
-    print(len(data))
+    #print(len(data))
     m = len(data)
 
 
@@ -191,12 +191,12 @@ def cal_score(lat, lng):
 
 
     score = 0
-    print(dist[0])
+    #print(dist[0])
     for i in range(0,n):
         if(dist[i] < 5.0):
             score += 5 - dist[i]
     score /= 5*n
-    print(score)
+    #print(score)
 
 
     # In[29]:
@@ -209,7 +209,7 @@ def cal_score(lat, lng):
 
 
     score *= 100
-    print(score)
+    #print(score)
 
 
     # In[40]:
@@ -222,7 +222,7 @@ def cal_score(lat, lng):
     for i in range(0,n):
         obj = {u"place": places[i], u"distance": dist[i]}
         data.append(obj)
-    print(json.dumps(data, indent=4))
+    #print(json.dumps(data, indent=4))
     #print(json.dumps(list(dist)))
 
 
